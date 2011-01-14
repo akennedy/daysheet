@@ -1,0 +1,34 @@
+= form_tag redraw_timesheets_path, :id => 'timesheet_options_form' do
+  .title_tools
+    = return_to_link(t(:timesheets), timesheets_path)
+  .title
+    %span#timesheet_options_title #{t :timesheet_options}
+  %fieldset
+    #errorExplanation{:style => 'display:none;'}
+      %h2
+      %p There were problems with the following fields
+      %ul
+    .subtitle #{t :display_options}
+    .section
+      .grid_3
+        %p
+          = label_tag :sort_by, t(:sort_by, :models => t(:timesheets_small))
+          %br
+          = render :partial => 'shared/sort_by'
+      .grid_3
+        %p
+          = label_tag :per_page, t(:show_per_page, :models => t(:timesheets_small))
+          %br
+          = render :partial => 'shared/per_page'
+      .clear
+    .subtitle #{t :other_options}
+    .section
+      .grid_3
+        %p
+          = label_tag :recipient, t(:recipient, :models => t(:timesheets))
+          = text_field_tag :recipient, @recipient
+      .clear
+  .buttonbar
+    = submit_tag t(:submit_options, :models => t(:timesheet))
+    #{t :or}
+    = link_to_cancel timesheets_path

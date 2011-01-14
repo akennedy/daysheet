@@ -1,0 +1,13 @@
+.standalone
+  = form_for resource, :as => resource_name, :url => invitation_path(resource_name), :html => { :method => :put } do |f|
+    .title_tools #{t :already_signed_up} #{link_to t(:login_now_link), new_user_session_path}
+    = f.error_messages
+    = f.hidden_field :invitation_token
+    .section
+      .label #{t :password}:
+      = f.password_field :password
+      .label #{t :password_confirmation}:
+      = f.password_field :password_confirmation
+
+    .buttonbar
+      = f.submit t(:set_password_button)

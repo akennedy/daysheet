@@ -1,0 +1,190 @@
+/* line 8, sass/rails.sass */
+#errorExplanation {
+  padding: 20px 35px !important;
+  border: 1px solid #8a1f11 !important;
+  padding: 7px !important;
+  padding-bottom: 12px !important;
+  margin: 20px 0 !important;
+  background: #ffffd5 !important;
+  color: #8a1f11 !important;
+}
+/* line 16, sass/rails.sass */
+#errorExplanation h2 {
+  text-align: left !important;
+  font-weight: bold !important;
+  padding: 5px 5px 5px 15px !important;
+  font-size: 12px !important;
+  margin: -7px !important;
+  margin-bottom: 5px !important;
+  background-color: #ffffd5 !important;
+  c0or: #222222 !important;
+}
+/* line 25, sass/rails.sass */
+#errorExplanation p {
+  color: #333333 !important;
+  margin-bottom: 0 !important;
+  padding: 5px !important;
+}
+/* line 29, sass/rails.sass */
+#errorExplanation ul {
+  margin-left: 25px;
+}
+/* line 31, sass/rails.sass */
+#errorExplanation ul li {
+  font-size: 12px !important;
+  list-style: square !important;
+  list-style-position: inside;
+}
+
+/* line 36, sass/rails.sass */
+.field_with_errors {
+  display: inline !important;
+}
+/* line 38, sass/rails.sass */
+.field_with_errors label {
+  color: #8a1f11 !important;
+}
+/* line 40, sass/rails.sass */
+.field_with_errors input, .field_with_errors select, .field_with_errors textarea {
+  border: 1px solid #8a1f11 !important;
+  background-color: #ffffd5 !important;
+  color: red !important;
+}
+
+/* line 48, sass/rails.sass */
+p.flash_warning, p.flash_error, p.flash_alert {
+  text-align: center;
+  background: lightyellow;
+  color: maroon;
+  margin: 0px;
+  padding: 5px 0px 5px 16px;
+}
+/* line 55, sass/rails.sass */
+p.flash_notice, p.flash_message {
+  text-align: center;
+  background: #ddff99;
+  color: darkgreen;
+  margin: 0px;
+  padding: 5px 0px 5px 16px;
+}
+/* line 62, sass/rails.sass */
+p.flash_exception {
+  text-align: center;
+  background: #ddff99;
+  border: 5px limegreen solid;
+  font-size: 14px;
+  margin: 50px auto;
+  padding: 50px;
+  width: 450px;
+  -moz-box-shadow: 5px 5px 15px #999999, -5px 0px 15px #999999;
+  -webkit-box-shadow: 5px 5px 15px #999999, -5px 0px 15px #999999;
+}
+
+/* line 76, sass/rails.sass */
+div.auto_complete {
+  background: white;
+  border-left: 1px solid silver;
+  border-right: 1px solid silver;
+  border-bottom: 1px solid silver;
+  margin: 0px;
+  padding: 0px;
+  position: absolute;
+  width: 310px;
+}
+/* line 86, sass/rails.sass */
+div.auto_complete ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+/* line 90, sass/rails.sass */
+div.auto_complete ul li {
+  color: #3f3f3f;
+  cursor: pointer;
+  display: block;
+  list-style-type: none;
+  margin: 0px;
+  padding: 2px;
+}
+/* line 97, sass/rails.sass */
+div.auto_complete ul li .highlight {
+  background: lightyellow;
+}
+/* line 99, sass/rails.sass */
+div.auto_complete ul li.selected {
+  background: royalblue;
+  color: white;
+}
+/* line 102, sass/rails.sass */
+div.auto_complete ul li.selected .highlight {
+  background: royalblue;
+}
+
+/* line 108, sass/rails.sass */
+.pagination {
+  float: right;
+  background: white;
+  margin: 6px 0px 0px 0px;
+  /* self-clearing method: */
+}
+/* line 112, sass/rails.sass */
+.pagination a, .pagination span, .pagination em {
+  padding: 0.2em 0.5em;
+  display: block;
+  float: left;
+  margin-right: 1px;
+}
+/* line 117, sass/rails.sass */
+.pagination span.disabled {
+  color: #999999;
+  border: 1px solid #dddddd;
+}
+/* line 120, sass/rails.sass */
+.pagination em {
+  font-weight: bold;
+  background: #b1d3a4;
+  color: #276733;
+  border: 1px solid #276733;
+}
+/* line 125, sass/rails.sass */
+.pagination a {
+  text-decoration: none;
+  color: #276733;
+  border: 1px solid #276733;
+}
+/* line 129, sass/rails.sass */
+.pagination a:hover, .pagination a:focus {
+  color: white;
+  border-color: #558b57;
+}
+/* line 132, sass/rails.sass */
+.pagination .page_info {
+  background: #dff7ca;
+  color: white;
+  padding: 0.4em 0.6em;
+  width: 22em;
+  margin-bottom: 0.3em;
+  text-align: center;
+}
+/* line 139, sass/rails.sass */
+.pagination .page_info b {
+  color: #000033;
+  background: #6aa6ed;
+  padding: 0.1em 0.25em;
+}
+/* line 145, sass/rails.sass */
+.pagination:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+/* line 151, sass/rails.sass */
+* html .pagination {
+  height: 1%;
+}
+/* line 153, sass/rails.sass */
+*:first-child + html .pagination {
+  overflow: hidden;
+}

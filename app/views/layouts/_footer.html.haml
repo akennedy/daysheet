@@ -1,0 +1,8 @@
+#footer
+  Powered by #{link_to "JRS", "http://www.jackhq.com" }
+  &copy; 2010-#{Date.today.year} by Andrew Kennedy
+  - unless tabless_layout?
+    \|
+    = link_to(t(:about), "#", :title => t(:about_ds))
+/ %br
+/ = render :partial => "layouts/about"

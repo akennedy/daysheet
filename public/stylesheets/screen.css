@@ -1,0 +1,1152 @@
+/* line 16, sass/base.sass */
+html, body {
+  background: #e5e5e5;
+  font-size-adjust: none;
+  font-stretch: normal;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  height: 100%;
+  line-height: normal;
+}
+
+/* line 27, sass/base.sass */
+body, ol, ul, li, dt, tt, label, input, select, textarea {
+  font-size: 12px;
+  font-family: "Lucida Grande", Geneva, Arial, Helvetica, sans-serif;
+}
+
+/* line 32, sass/base.sass */
+body, h1, h2, h3, h4, h5, h6, ol, ul, li {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* line 36, sass/base.sass */
+form {
+  margin: 0px;
+}
+
+/* line 39, sass/base.sass */
+ul li {
+  list-style-type: none;
+}
+
+/* line 42, sass/base.sass */
+label {
+  font-weight: bold;
+  color: gray;
+}
+
+/* line 46, sass/base.sass */
+fieldset {
+  padding: 1em;
+  margin: 1em 0 0 0;
+  border-top: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+  background: none repeat scroll 0 0 whitesmoke;
+}
+
+/* line 54, sass/base.sass */
+legend {
+  font-weight: bold;
+  font-size: 1em;
+  background: white;
+  border: 1px solid maroon;
+  padding: 3px;
+}
+
+/* line 61, sass/base.sass */
+input[type=text], input[type=password], input.text, input.title, textarea, select {
+  background-color: white;
+  border: 1px solid #bbbbbb;
+  padding: 2px;
+}
+
+/* line 66, sass/base.sass */
+input[type=text] {
+  width: 200px;
+}
+
+/* line 71, sass/base.sass */
+a {
+  text-decoration: none;
+}
+/* line 73, sass/base.sass */
+a:link, a:visited {
+  color: #276733;
+}
+/* line 75, sass/base.sass */
+a:hover {
+  background: #276733;
+  color: white;
+}
+/* line 79, sass/base.sass */
+a img {
+  background-color: white;
+  border: none;
+  color: white;
+  text-decoration: none;
+}
+
+/* line 86, sass/base.sass */
+#options a {
+  border-bottom: 1px dotted darkcyan;
+  color: darkcyan;
+  text-decoration: none;
+}
+/* line 90, sass/base.sass */
+#options a:hover {
+  background: #e5e5e5;
+  border-bottom: 1px dotted darkblue;
+  color: darkblue;
+}
+
+/* line 97, sass/base.sass */
+abbr {
+  font-size: 9px;
+}
+
+/* line 100, sass/base.sass */
+small {
+  font-size: 10px;
+}
+
+/* line 103, sass/base.sass */
+dt {
+  font-size: 11px;
+}
+
+/* line 106, sass/base.sass */
+tt {
+  font-size: 12px;
+}
+
+/* line 25, sass/header.sass */
+#header {
+  background: #276733;
+  color: #dff7ca;
+  padding: 8px 16px 8px 16px;
+}
+/* line 30, sass/header.sass */
+#header h3 a {
+  background: #276733;
+  color: #66ff2f;
+  font: normal 15px "Lucida Grande", Arial, Helvetica, sans-serif;
+  text-decoration: none;
+}
+/* line 36, sass/header.sass */
+#header #welcome {
+  float: right;
+  font-size: 11px;
+}
+/* line 39, sass/header.sass */
+#header #welcome a {
+  color: lightyellow;
+  padding: 1px 4px 2px 4px;
+  text-decoration: none;
+}
+/* line 43, sass/header.sass */
+#header #welcome a:hover {
+  background: #276733;
+  color: yellow;
+}
+/* line 46, sass/header.sass */
+#header #welcome a.selected {
+  background: steelblue;
+  color: lightyellow;
+  -moz-border-radius-topleft: 2px;
+  -moz-border-radius-topright: 2px;
+  -webkit-border-top-left-radius: 2px;
+  -webkit-border-top-right-radius: 2px;
+}
+/* line 56, sass/header.sass */
+#header #jumpbox {
+  background: steelblue;
+  margin: 2px 0px 0px 0px;
+  padding: 12px;
+  position: absolute;
+  -moz-border-radius-bottomleft: 6px;
+  -moz-border-radius-bottomright: 6px;
+  -webkit-border-bottom-left-radius: 6px;
+  -webkit-border-bottom-right-radius: 6px;
+}
+/* line 68, sass/header.sass */
+#header #jumpbox #jumpbox_menu a {
+  color: white;
+  padding: 0px 0px 4px 0px;
+}
+/* line 71, sass/header.sass */
+#header #jumpbox #jumpbox_menu a.selected {
+  color: navy;
+}
+/* line 73, sass/header.sass */
+#header #jumpbox #jumpbox_menu a:hover {
+  background: steelblue;
+}
+/* line 75, sass/header.sass */
+#header #jumpbox #jumpbox_label {
+  color: white;
+}
+/* line 77, sass/header.sass */
+#header #jumpbox input {
+  margin: 2px 0px 0px 0px;
+}
+
+/* line 79, sass/header.sass */
+#tabs {
+  background: #276733;
+  height: 24px;
+  padding: 0px;
+  text-align: center;
+  width: 100%;
+}
+/* line 89, sass/header.sass */
+#tabs li {
+  float: left;
+  font-size: 12px;
+  list-style: none;
+  margin: 0px 4px 0px 16px;
+  width: 80px;
+}
+/* line 96, sass/header.sass */
+#tabs a:link, #tabs a:visited {
+  background: #558b57;
+  color: white;
+  float: left;
+  padding: 4px 8px 5px 8px;
+  text-align: center;
+  text-decoration: none;
+  width: 80px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-topright: 3px;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-top-right-radius: 3px;
+}
+/* line 111, sass/header.sass */
+#tabs a:hover {
+  background: #dff7ca;
+  color: #276733;
+}
+/* line 115, sass/header.sass */
+#tabs a:link.active, #tabs a:visited.active {
+  background: #b1d3a4;
+  color: #276733;
+  text-decoration: none;
+}
+
+/* line 120, sass/header.sass */
+#footer {
+  color: grey;
+  font-size: 10px;
+  padding: 0px 0px 0px 16px;
+}
+
+/* line 13, sass/common.sass */
+.title {
+  border-bottom: 1px gray solid;
+  color: #276733;
+  font-size: 17px;
+  font-weight: bold;
+  padding-bottom: 2px;
+}
+/* line 21, sass/common.sass */
+.title img {
+  position: relative;
+  top: 2px;
+}
+
+/* line 25, sass/common.sass */
+.title_tools {
+  font-size: 12px;
+  float: right;
+  margin: 4px 0px 0px 0px;
+}
+
+/* line 30, sass/common.sass */
+.subtitle {
+  border-bottom: 1px silver solid;
+  color: #2f2f2f;
+  font-size: 13px;
+  font-weight: bold;
+  margin: 15px 0 0 0;
+}
+/* line 36, sass/common.sass */
+.subtitle a:link, .subtitle a:visited {
+  color: darkslateblue;
+  text-decoration: none;
+}
+/* line 39, sass/common.sass */
+.subtitle a:hover {
+  background: none;
+}
+
+/* line 43, sass/common.sass */
+.subtitle_tools {
+  font-size: 11px;
+  float: right;
+}
+
+/* line 47, sass/common.sass */
+.radio_box {
+  line-height: 20px;
+}
+/* line 50, sass/common.sass */
+.radio_box input {
+  position: relative;
+  top: -2px;
+}
+
+/* line 54, sass/common.sass */
+.check_box {
+  line-height: 20px;
+}
+/* line 57, sass/common.sass */
+.check_box input {
+  position: relative;
+  top: -3px;
+}
+/* line 61, sass/common.sass */
+.check_box label {
+  font-size: 11px;
+}
+
+/* line 66, sass/common.sass */
+.tabless {
+  margin: auto;
+  width: 480px;
+}
+
+/* line 70, sass/common.sass */
+.standalone {
+  background: whitesmoke;
+  border: 20px #b1d3a4 solid;
+  margin: 75px auto 6px auto;
+  padding: 20px;
+  width: 400px;
+  -moz-border-radius: 6px;
+  -moz-box-shadow: 5px 5px 15px #bbbbbb, -5px 0px 15px #bbbbbb;
+  -webkit-border-radius: 6px;
+  -webkit-box-shadow: 5px 5px 15px #bbbbbb, -5px 0px 15px #bbbbbb;
+}
+/* line 81, sass/common.sass */
+.standalone input[type="text"], .standalone input[type="password"] {
+  font-size: 16px;
+  padding: 2px;
+  width: 355px;
+}
+/* line 86, sass/common.sass */
+.standalone input[type="submit"] {
+  font-size: 14px;
+}
+
+/* line 89, sass/common.sass */
+.tabbed {
+  padding: 12px 12px 12px 16px;
+}
+
+/* line 92, sass/common.sass */
+.main {
+  background: white;
+  padding: 8px 15px 15px 15px;
+  -moz-border-radius: 4px;
+  -moz-box-shadow: 2px 2px 8px #bbbbbb, -2px 0px 8px #bbbbbb;
+  -webkit-border-radius: 4px;
+  -webkit-box-shadow: 2px 2px 8px #bbbbbb, -2px 0px 8px #bbbbbb;
+}
+
+/* line 100, sass/common.sass */
+.sidebar {
+  color: #3f3f3f;
+  font-size: 11px;
+  padding: 0px 12px 0px 0px;
+  width: 210px;
+}
+
+/* line 107, sass/common.sass */
+.form h3 {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #276733;
+  color: #276733;
+}
+/* line 112, sass/common.sass */
+.form h4 {
+  font-size: 18px;
+  height: 30px;
+}
+
+/* line 116, sass/common.sass */
+.tools {
+  font-size: 10px;
+  float: right;
+  padding: 0px 0px 0px 4px;
+}
+/* line 121, sass/common.sass */
+.tools#comment_new_tools {
+  margin: 8px 0px 0px 0px;
+}
+
+/* line 124, sass/common.sass */
+.label {
+  color: #3f3f3f;
+  font-size: 12px;
+  margin: 8px 0px 0px 0px;
+}
+
+/* line 129, sass/common.sass */
+.top {
+  margin: 5px 0px 0px 0px;
+}
+
+/* line 132, sass/common.sass */
+.req {
+  color: #276733;
+}
+
+/* line 135, sass/common.sass */
+.intro {
+  color: dimgray;
+  font-size: 12px;
+  padding-top: 5px;
+}
+
+/* line 140, sass/common.sass */
+.section {
+  background: whitesmoke;
+  color: #3f3f3f;
+  margin: 0px 0px 2px 0px;
+  padding: 4px 15px 8px 15px;
+}
+
+/* line 146, sass/common.sass */
+.remote {
+  border: 5px lightblue solid;
+  background: whitesmoke;
+  margin: 0px;
+  padding: 0px 10px 0px 10px;
+  position: relative;
+}
+/* line 152, sass/common.sass */
+.remote .close {
+  background: lightblue;
+  border-top: 1px gainsboro solid;
+  border-left: 1px gainsboro solid;
+  border-bottom: 1px grey solid;
+  border-right: 1px grey solid;
+  color: navy;
+  cursor: pointer;
+  height: 16px;
+  margin: 3px;
+  position: absolute;
+  right: 0px;
+  text-align: center;
+  top: 0px;
+  width: 17px;
+}
+
+/* line 169, sass/common.sass */
+.buttonbar {
+  border-top: 1px gray solid;
+  margin: 8px auto;
+  padding-top: 8px;
+}
+
+/* line 174, sass/common.sass */
+.section input, .sidebar input, .inline input,
+.section select, .sidebar select, .inline select,
+.section textarea, .sidebar textarea, .inline textarea {
+  margin: 3px 0px 0px 0px;
+  vertical-align: middle;
+}
+
+/* line 180, sass/common.sass */
+.cool {
+  color: darkgreen;
+}
+
+/* line 183, sass/common.sass */
+.warn {
+  color: crimson;
+}
+
+/* line 186, sass/common.sass */
+.urgent {
+  color: darkred;
+}
+
+/* line 189, sass/common.sass */
+.black {
+  color: black;
+}
+
+/* line 192, sass/common.sass */
+.white {
+  color: white !important;
+}
+
+/* line 195, sass/common.sass */
+.grayed {
+  color: silver !important;
+}
+
+/* line 198, sass/common.sass */
+.strip {
+  background: gainsboro;
+  color: black;
+  float: left;
+  font-size: 11px;
+  margin: 0px 6px 0px 0px;
+  padding: 1px 4px 1px 3px;
+  text-align: right;
+  width: 75px;
+  -moz-border-radius-topleft: 7px;
+  -moz-border-radius-bottomleft: 7px;
+  -webkit-border-top-left-radius: 7px;
+  -webkit-border-bottom-left-radius: 7px;
+}
+
+/* line 219, sass/common.sass */
+.indent {
+  margin-left: 88px;
+}
+
+/* line 222, sass/common.sass */
+.indentslim {
+  margin-left: 38px;
+}
+
+/* line 225, sass/common.sass */
+.indentwide {
+  margin-left: 106px;
+}
+
+/* line 228, sass/common.sass */
+.indentfull {
+  margin-left: 126px;
+}
+
+/* line 231, sass/common.sass */
+.bucket {
+  margin: 0px 0px 10px 0px;
+}
+
+/* line 234, sass/common.sass */
+.prefix {
+  width: 30px;
+  font-size: 10px;
+}
+
+/* line 238, sass/common.sass */
+.comment {
+  background: #f2f2f2;
+  border-bottom: 1px gainsboro solid;
+  margin: 2px 0px 0px 0px;
+  overflow: hidden;
+  padding: 4px;
+  list-style: none;
+}
+/* line 252, sass/common.sass */
+.comment#comment_new {
+  margin: 3px 0px 0px 0px;
+}
+/* line 255, sass/common.sass */
+.comment input[type=text] {
+  border: 1px #cfcfcf solid;
+  color: grey;
+  font-size: 11px;
+  margin: 3px 0px 0px 0px;
+  padding: 3px;
+  width: 500px;
+}
+/* line 262, sass/common.sass */
+.comment textarea {
+  font-size: 11px;
+  height: 110px;
+  margin: 3px 0px 0px 0px;
+  padding: 3px;
+  width: 500px;
+}
+/* line 269, sass/common.sass */
+.comment .gravatar {
+  float: left;
+  margin: 3px 10px 3px 3px;
+}
+/* line 273, sass/common.sass */
+.comment .body {
+  display: inline;
+  font-size: 11px;
+}
+/* line 277, sass/common.sass */
+.comment tt {
+  font-size: 10px;
+  color: #666666;
+}
+/* line 281, sass/common.sass */
+.comment dt {
+  padding: 0px;
+  margin: -10px 0px 0px 36px;
+}
+/* line 284, sass/common.sass */
+.comment dt p {
+  margin: 10px 0px 0px 0px;
+}
+
+/* line 288, sass/common.sass */
+.mail {
+  background: #f2f2f2;
+  border-bottom: 1px gainsboro solid;
+  margin: 2px 0px 0px 0px;
+  overflow: hidden;
+  padding: 4px;
+  list-style: none;
+}
+/* line 296, sass/common.sass */
+.mail .gravatar {
+  float: left;
+  margin: 3px 10px 3px 3px;
+}
+/* line 300, sass/common.sass */
+.mail .subject {
+  color: black;
+}
+/* line 303, sass/common.sass */
+.mail .body {
+  display: inline;
+  font-size: 11px;
+}
+/* line 307, sass/common.sass */
+.mail tt {
+  font-size: 10px;
+  color: #666666;
+}
+/* line 311, sass/common.sass */
+.mail dt {
+  padding: 0px;
+  margin: -10px 0px 0px 36px;
+}
+/* line 314, sass/common.sass */
+.mail dt p {
+  margin: 10px 0px 0px 0px;
+}
+
+/* line 317, sass/common.sass */
+.mailer_green {
+  color: #276733;
+}
+
+/* line 320, sass/common.sass */
+.toggle {
+  font-weight: normal;
+}
+
+/* line 323, sass/common.sass */
+#paginate {
+  float: right;
+  font-size: 10px;
+  margin: 4px 0px 0px 0px;
+}
+
+/* line 328, sass/common.sass */
+#paging {
+  float: right;
+  margin: 7px 5px 0px 0px;
+}
+
+/* line 332, sass/common.sass */
+.confirm {
+  background: #cdfecd;
+  border-left: 10px palegreen solid;
+  font-size: 11px;
+  margin: 0px 0px 6px 0px;
+  padding: 6px;
+}
+
+/* line 341, sass/common.sass */
+.log {
+  padding: 8px 0px 0px 0px;
+}
+/* line 344, sass/common.sass */
+.log h3 {
+  border-bottom: 1px #2f2f2f dotted;
+  color: #2f2f2f;
+  margin: 0px 0px 4px 0px;
+  padding: 2px 0px 2px 86px;
+}
+/* line 349, sass/common.sass */
+.log h3.overdue {
+  color: crimson;
+  border-bottom: 1px crimson dotted;
+}
+/* line 352, sass/common.sass */
+.log h3.due_asap {
+  color: darkred;
+  border-bottom: 1px darkred dotted;
+}
+/* line 355, sass/common.sass */
+.log h3.due_today {
+  color: darkgreen;
+  border-bottom: 1px darkgreen dotted;
+}
+/* line 358, sass/common.sass */
+.log li {
+  color: #3f3f3f;
+  font-size: 12px;
+  list-style: none;
+  padding: 3px 0px 3px 0px;
+}
+/* line 364, sass/common.sass */
+.log li tt {
+  color: dimgray;
+  font-size: 11px;
+}
+/* line 368, sass/common.sass */
+.log input[type=checkbox] {
+  float: left;
+  margin: 0px 4px 0px 0px;
+}
+
+/* line 374, sass/common.sass */
+.list {
+  padding: 8px 0px 0px 0px;
+}
+/* line 376, sass/common.sass */
+.list li {
+  border-bottom: 1px silver dotted;
+  clear: both;
+  color: #3f3f3f;
+  font-size: 12px;
+  list-style: none;
+  padding: 6px 0px 6px 0px;
+}
+/* line 384, sass/common.sass */
+.list li .gravatar {
+  float: left;
+  padding: 0px 8px 0px 0px;
+}
+/* line 388, sass/common.sass */
+.list li tt {
+  color: dimgray;
+  font-size: 11px;
+}
+/* line 392, sass/common.sass */
+.list li dt {
+  color: #3f3f3f;
+  font-size: 11px;
+  padding: 2px 0px 0px 0px;
+}
+/* line 397, sass/common.sass */
+.list li dt a:link, .list li dt a:visited {
+  color: #3f3f3f;
+  font-weight: bold;
+  text-decoration: none;
+}
+/* line 402, sass/common.sass */
+.list li dt a:hover {
+  background: dimgray;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* line 410, sass/common.sass */
+.filters, .panel {
+  background: snow;
+  margin: 0px 0px 12px 0px;
+  padding: 6px 8px 6px 8px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-box-shadow: 2px 2px 8px #bbbbbb, -2px 0px 8px #bbbbbb;
+  -webkit-box-shadow: 2px 2px 8px #bbbbbb, -2px 0px 8px #bbbbbb;
+}
+
+/* line 420, sass/common.sass */
+.filters h4 {
+  color: navy;
+  font-size: 12px;
+  font-weight: bold;
+}
+/* line 424, sass/common.sass */
+.filters input[type=text] {
+  margin-bottom: 4px;
+}
+
+/* line 428, sass/common.sass */
+.panel div {
+  margin: 0px 0px 10px 0px;
+}
+/* line 430, sass/common.sass */
+.panel h4 {
+  font-size: 13px;
+  font-weight: bold;
+}
+/* line 433, sass/common.sass */
+.panel li {
+  border-bottom: 1px silver dotted;
+  font-size: 12px;
+  list-style: none;
+  padding: 2px 0px 3px 0px;
+}
+/* line 438, sass/common.sass */
+.panel li dt {
+  float: right;
+  font-size: 11px;
+  font-weight: bold;
+}
+/* line 442, sass/common.sass */
+.panel li tt {
+  font-size: 11px;
+}
+/* line 444, sass/common.sass */
+.panel li.last {
+  border-bottom: none;
+}
+/* line 447, sass/common.sass */
+.panel .caption {
+  border-bottom: 1px grey solid;
+  color: navy;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 4px 0px 2px 0px;
+  padding: 2px 0px 2px 0px;
+}
+/* line 456, sass/common.sass */
+.panel#recently {
+  background: floralwhite;
+}
+/* line 459, sass/common.sass */
+.panel#summary {
+  background: oldlace;
+}
+/* line 462, sass/common.sass */
+.panel#summary p {
+  margin: 4px 0px 4px 0px;
+}
+
+/* line 465, sass/common.sass */
+.selector {
+  color: black;
+  cursor: pointer;
+  font-size: 10px;
+  text-align: center;
+}
+
+/* line 471, sass/common.sass */
+.on {
+  background: lightgoldenrodyellow;
+  border: 1px silver inset;
+}
+
+/* line 475, sass/common.sass */
+.off {
+  background: lightgrey;
+  border: 1px silver outset;
+}
+
+/* line 479, sass/common.sass */
+.arrow {
+  font-size: 9px;
+  padding: 0px 2px 3px 0px;
+}
+
+/* line 483, sass/common.sass */
+.left {
+  -moz-border-radius-bottomleft: 9px;
+  -moz-border-radius-topleft: 9px;
+  -webkit-border-bottom-left-radius: 9px;
+  -webkit-border-top-left-radius: 9px;
+}
+
+/* line 491, sass/common.sass */
+.right {
+  -moz-border-radius-bottomright: 9px;
+  -moz-border-radius-topright: 9px;
+  -webkit-border-bottom-right-radius: 9px;
+  -webkit-border-top-right-radius: 9px;
+}
+
+/* line 501, sass/common.sass */
+.menu {
+  background: #f4f5eb;
+  border-top: 1px solid #dddddd;
+  border-left: 1px solid #dddddd;
+  border-right: 1px solid #666666;
+  border-bottom: 1px solid #666666;
+  left: 0px;
+  padding: 2px 0px;
+  position: absolute;
+  top: 0px;
+  width: 12em;
+  -webkit-box-shadow: 10px 10px 15px gainsboro;
+}
+/* line 514, sass/common.sass */
+.menu ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+/* line 518, sass/common.sass */
+.menu li {
+  list-style-position: outside;
+}
+/* line 520, sass/common.sass */
+.menu a {
+  color: #555555;
+  cursor: default;
+  display: block;
+  margin: 0px 2px;
+  outline: none;
+  padding: 4px 15px;
+  text-decoration: none;
+}
+/* line 528, sass/common.sass */
+.menu a:hover {
+  background: mediumblue;
+  color: white;
+}
+
+/* line 8, sass/rails.sass */
+#errorExplanation {
+  padding: 20px 35px !important;
+  border: 1px solid #8a1f11 !important;
+  padding: 7px !important;
+  padding-bottom: 12px !important;
+  margin: 20px 0 !important;
+  background: #ffffd5 !important;
+  color: #8a1f11 !important;
+}
+/* line 16, sass/rails.sass */
+#errorExplanation h2 {
+  text-align: left !important;
+  font-weight: bold !important;
+  padding: 5px 5px 5px 15px !important;
+  font-size: 12px !important;
+  margin: -7px !important;
+  margin-bottom: 5px !important;
+  background-color: #ffffd5 !important;
+  c0or: #222222 !important;
+}
+/* line 25, sass/rails.sass */
+#errorExplanation p {
+  color: #333333 !important;
+  margin-bottom: 0 !important;
+  padding: 5px !important;
+}
+/* line 29, sass/rails.sass */
+#errorExplanation ul {
+  margin-left: 25px;
+}
+/* line 31, sass/rails.sass */
+#errorExplanation ul li {
+  font-size: 12px !important;
+  list-style: square !important;
+  list-style-position: inside;
+}
+
+/* line 36, sass/rails.sass */
+.field_with_errors {
+  display: inline !important;
+}
+/* line 38, sass/rails.sass */
+.field_with_errors label {
+  color: #8a1f11 !important;
+}
+/* line 40, sass/rails.sass */
+.field_with_errors input, .field_with_errors select, .field_with_errors textarea {
+  border: 1px solid #8a1f11 !important;
+  background-color: #ffffd5 !important;
+  color: red !important;
+}
+
+/* line 48, sass/rails.sass */
+p.flash_warning, p.flash_error, p.flash_alert {
+  text-align: center;
+  background: lightyellow;
+  color: maroon;
+  margin: 0px;
+  padding: 5px 0px 5px 16px;
+}
+/* line 55, sass/rails.sass */
+p.flash_notice, p.flash_message {
+  text-align: center;
+  background: #ddff99;
+  color: darkgreen;
+  margin: 0px;
+  padding: 5px 0px 5px 16px;
+}
+/* line 62, sass/rails.sass */
+p.flash_exception {
+  text-align: center;
+  background: #ddff99;
+  border: 5px limegreen solid;
+  font-size: 14px;
+  margin: 50px auto;
+  padding: 50px;
+  width: 450px;
+  -moz-box-shadow: 5px 5px 15px #999999, -5px 0px 15px #999999;
+  -webkit-box-shadow: 5px 5px 15px #999999, -5px 0px 15px #999999;
+}
+
+/* line 76, sass/rails.sass */
+div.auto_complete {
+  background: white;
+  border-left: 1px solid silver;
+  border-right: 1px solid silver;
+  border-bottom: 1px solid silver;
+  margin: 0px;
+  padding: 0px;
+  position: absolute;
+  width: 310px;
+}
+/* line 86, sass/rails.sass */
+div.auto_complete ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+/* line 90, sass/rails.sass */
+div.auto_complete ul li {
+  color: #3f3f3f;
+  cursor: pointer;
+  display: block;
+  list-style-type: none;
+  margin: 0px;
+  padding: 2px;
+}
+/* line 97, sass/rails.sass */
+div.auto_complete ul li .highlight {
+  background: lightyellow;
+}
+/* line 99, sass/rails.sass */
+div.auto_complete ul li.selected {
+  background: royalblue;
+  color: white;
+}
+/* line 102, sass/rails.sass */
+div.auto_complete ul li.selected .highlight {
+  background: royalblue;
+}
+
+/* line 108, sass/rails.sass */
+.pagination {
+  float: right;
+  background: white;
+  margin: 6px 0px 0px 0px;
+  /* self-clearing method: */
+}
+/* line 112, sass/rails.sass */
+.pagination a, .pagination span, .pagination em {
+  padding: 0.2em 0.5em;
+  display: block;
+  float: left;
+  margin-right: 1px;
+}
+/* line 117, sass/rails.sass */
+.pagination span.disabled {
+  color: #999999;
+  border: 1px solid #dddddd;
+}
+/* line 120, sass/rails.sass */
+.pagination em {
+  font-weight: bold;
+  background: #b1d3a4;
+  color: #276733;
+  border: 1px solid #276733;
+}
+/* line 125, sass/rails.sass */
+.pagination a {
+  text-decoration: none;
+  color: #276733;
+  border: 1px solid #276733;
+}
+/* line 129, sass/rails.sass */
+.pagination a:hover, .pagination a:focus {
+  color: white;
+  border-color: #558b57;
+}
+/* line 132, sass/rails.sass */
+.pagination .page_info {
+  background: #dff7ca;
+  color: white;
+  padding: 0.4em 0.6em;
+  width: 22em;
+  margin-bottom: 0.3em;
+  text-align: center;
+}
+/* line 139, sass/rails.sass */
+.pagination .page_info b {
+  color: #000033;
+  background: #6aa6ed;
+  padding: 0.1em 0.25em;
+}
+/* line 145, sass/rails.sass */
+.pagination:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+/* line 151, sass/rails.sass */
+* html .pagination {
+  height: 1%;
+}
+/* line 153, sass/rails.sass */
+*:first-child + html .pagination {
+  overflow: hidden;
+}
+
+/* line 10, sass/jquery.sass */
+.ui-icon {
+  color: #276733;
+}
+
+/* line 13, sass/jquery.sass */
+.ui-icon-white {
+  background-image: url(/stylesheets/daysheet-theme/images/ui-icons_ffffff_256x240.png);
+}
+
+/* line 18, sass/jquery.sass */
+input.error {
+  background-color: #ffffd5;
+  border: 1px solid #8a1f11;
+  color: red;
+}
+
+/* line 22, sass/jquery.sass */
+textarea.error {
+  background-color: #ffffd5;
+  border: 1px solid #8a1f11;
+  color: red;
+}
+
+/* line 26, sass/jquery.sass */
+select.error {
+  background-color: #ffffd5;
+  border: 1px solid #8a1f11;
+  color: #8a1f11;
+}
+
+/* line 30, sass/jquery.sass */
+label.error {
+  font-size: 12px;
+  display: block;
+  padding-bottom: 2px;
+  margin-left: 5px;
+  margin-top: 0;
+  padding-top: 0;
+  font-weight: bold;
+  color: #8a1f11;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  /* line 4, sass/safari.sass */
+  .log input {
+    float: left;
+    margin: 1px 4px 0px 0px;
+  }
+
+  /* line 9, sass/safari.sass */
+  .standalone input[type="submit"] {
+    font-size: 3em;
+  }
+}

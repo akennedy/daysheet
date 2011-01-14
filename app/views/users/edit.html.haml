@@ -1,0 +1,72 @@
+= form_for(@user) do |f|
+  .title_tools
+    = return_to_link(t(:user), user_path(@user))
+  .title#title= t(:edit_profile)
+  = f.error_messages
+  %fieldset
+    .section
+      .grid_3
+        %p
+          = f.label :first_name, "#{t :first_name}"
+          %br
+          = f.text_field :first_name
+      .grid_1
+        %p
+          = f.label :mi, "#{t :mi}"
+          %br
+          = f.text_field :mi, :style => 'width: 45px;', :maxlength => 1
+      .grid_2
+        %p
+          = f.label :last_name, "#{t :last_name}"
+          %br
+          = f.text_field :last_name
+      .clear
+      .grid_3
+        %p
+          = f.label :username, "#{t :username}"
+          %br
+          = f.text_field :username
+      .clear
+      .grid_3
+        %p
+          = f.label :title, "#{t :title}"
+          %br
+          = f.text_field :title
+      .clear
+      .grid_3
+        %p
+          = f.label :company, "#{t :company}"
+          %br
+          = f.text_field :company
+      .clear
+    .subtitle #{t :contact_info}
+    %br
+    .section
+      .grid_3
+        %p
+          = f.label :email, "#{t :email}", :class => 'req'
+          %br
+          = f.text_field :email
+      .grid_3
+        %p
+          = f.label :alt_email, "#{t :alt_email}"
+          %br
+          = f.text_field :alt_email
+      .clear
+      .grid_3
+        %p
+          = f.label :phone, "#{t :phone}"
+          %br
+          = f.text_field :phone
+      .grid_3
+        %p
+          = f.label :mobile, "#{t :mobile}"
+          %br
+          = f.text_field :mobile
+      .clear
+  .buttonbar
+    = f.submit t :save_profile
+    #{t :or}
+    = link_to_cancel user_path(@user)
+
+    

@@ -1,0 +1,23 @@
+:tabs: [
+  { :active : true,  :text : :tab_dashboard,    :url : { :controller : ""              } },
+  { :active : false, :text : :tab_timesheets,   :url : { :controller : "timesheets"          } },
+  { :active : false, :text : :tab_calendars,    :url : { :controller : "calendars"          } }
+]
+
+:admin_tabs: [
+  { :active : true,  :text : :admin_tab_users,    :url : { :controller : "admin/users"    } }
+]
+
+#------------------------------------------------------------------------------
+timesheet_status:
+  - :new
+  - :emailed
+  - :completed
+
+timesheet_status_color:
+  :new        : palegreen
+  :emailed    : paleturquoise
+  :completed  : bisque
+  
+timesheet_recipient_email:
+  "andrew@jackrussellsoftware.com"

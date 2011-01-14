@@ -1,0 +1,17 @@
+= styles_for :timesheet
+
+.title_tools
+  = link_to_create(:create_timesheet, new_timesheet_path, :text => t(:create_timesheet))
+  |
+  = link_to_options(:options, options_timesheets_path, :text=> t(:options))
+
+.title
+  %span#create_timesheet_title #{t :timesheets}
+  = image_tag("loading2.gif", :size => "16x16", :id => "loading", :style => "display: none;")
+
+.list#timesheets
+  - unless @timesheets.empty?
+    = render :partial => "timesheet", :collection => @timesheets
+  - else
+    = render :partial => "shared/empty"
+#paginate= render :partial => "shared/paginate"

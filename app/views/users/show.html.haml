@@ -1,0 +1,8 @@
+.title_tools
+  - if can? :update, @user
+    = link_to_update(@user, edit_user_path(@user), :text => t(:edit_profile))
+    - if @user == current_user
+      | 
+      = link_to_update(@user, edit_user_registration_path, :text => t(:change_password))
+.title#title= (@user == @current_user ? t(:my_profile) : t(:profile))
+.list#profile= render :partial => "user"

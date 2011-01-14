@@ -1,0 +1,4 @@
+result = render :partial => "user", :collection => [@user]
+page << "$('#user_#{@user.id}').replaceWith('#{ escape_javascript result }')"
+page << "$('#user_#{@user.id}').animate({'background-color': '#FFFF99'}, 1000)"
+page << "$('#user_#{@user.id}').animate({'background-color': 'transparent'}, 500)"

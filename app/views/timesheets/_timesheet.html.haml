@@ -1,0 +1,17 @@
+%li[timesheet]{ highlightable(dom_id(timesheet, :tools)) }
+  / .strip{:class => timesheet.workflow_state}= t(timesheet.workflow_state)
+  .strip test
+  .tools{ invisible, :id => dom_id(timesheet, :tools) }
+    / = link_to_edit(timesheet, edit_timesheet_path(timesheet), :text => t(:edit)) << " | "
+
+  .indent
+    / = link_to(h(timesheet.date_range), timesheet)
+    = link_to timesheet.date_range, "#"
+    %tt
+      something
+    %dt
+      %b
+        wow
+    %dt
+      %b
+        what

@@ -1,0 +1,13 @@
+#header
+  #welcome
+    %span 
+      #{t :welcome},
+      = current_user.username
+    %span> !&nbsp;&nbsp;
+
+    = link_to(t(:profile), user_path(current_user)) << " |"
+    = link_to(t(:back_to_daysheet), root_path) << " |"
+    = link_to(t(:logout), logout_path)
+  
+  %h3
+    = link_to(t(:daysheet_admin_page), admin_path)

@@ -1,0 +1,4 @@
+result = render :partial => "user", :collection => @users
+paginate = render :partial => "shared/paginate"
+page << "$('#users').html('#{ escape_javascript result }')"
+page << "$('#paginate').html('#{ escape_javascript paginate }')"

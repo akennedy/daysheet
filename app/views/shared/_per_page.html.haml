@@ -1,0 +1,4 @@
+%select{:id => 'per_page', :name => 'per_page'}
+  - Preference::PERPAGE.each do |count|
+    - selected = count == @per_page ? true : false
+    %option{:value => count, :selected => selected}= count

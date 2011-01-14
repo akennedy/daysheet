@@ -1,0 +1,107 @@
+!green1                      = #DFF7CA
+!green2                      = #B1D3A4
+!green3                      = #83AF7F
+!green4                      = #558B57
+!green5                      = #276733
+
+!color_body                  = #e5e5e5
+!color_link                  = !green5
+!color_link_hover            = "white"
+!color_link_hover_background = !green5
+!color_link_image            = "white"
+!color_link_image_background = "white"
+
+// Standard HTML tags.
+//------------------------------------------------------------------------------
+html, body
+  :background = !color_body
+  :font
+    :size-adjust none
+    :stretch normal
+    :style normal
+    :variant normal
+    :weight normal
+  :height 100%
+  :line-height normal
+
+body, ol, ul, li, dt, tt, label, input, select, textarea
+  :font
+    :size 12px
+    :family "Lucida Grande", Geneva, Arial, Helvetica, sans-serif
+
+body, h1, h2, h3, h4, h5, h6, ol, ul, li
+  :margin 0px
+  :padding 0px
+
+form
+  :margin 0px
+
+ul li
+  :list-style-type none
+  
+label
+  font-weight: bold
+  color: gray
+  
+fieldset
+  padding: 1em
+  margin: 1em 0 0 0
+  border-top: 1px solid #ccc
+  border-bottom: 1px solid #ccc
+  background: none repeat scroll 0 0 whitesmoke
+
+
+legend
+  font-weight: bold
+  font-size: 1em
+  background: white
+  border: 1px solid maroon
+  padding: 3px
+
+input[type=text], input[type=password], input.text, input.title, textarea, select
+  background-color: #fff
+  border: 1px solid #bbb
+  padding: 2px
+  
+input[type=text]
+  width: 200px
+
+// Links.
+//------------------------------------------------------------------------------
+a
+  :text-decoration none
+  &:link, &:visited
+    :color = !color_link
+  &:hover 
+    :background = !color_link_hover_background
+    :color = !color_link_hover
+
+  img
+    :background-color = !color_link_image_background
+    :border none
+    :color = !color_link_image
+    :text-decoration none
+
+#options
+  a
+    :border-bottom 1px dotted darkcyan
+    :color darkcyan
+    :text-decoration none
+    &:hover
+      :background = !color_body
+      :border-bottom 1px dotted darkblue
+      :color darkblue
+
+// Smaller fonts.
+//------------------------------------------------------------------------------
+abbr
+  :font-size 9px
+
+small
+  :font-size 10px 
+
+dt
+  :font-size 11px 
+
+tt
+  :font-size 12px 

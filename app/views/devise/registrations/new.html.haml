@@ -1,0 +1,18 @@
+.standalone
+  = form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
+    / = devise_error_messages!
+    .title_tools #{t :already_signed_up} #{link_to t(:login_now_link), new_user_session_path}
+    .title #{t :sign_up}
+    = f.error_messages
+    .section
+      .label #{t :email}:
+      = f.text_field :email
+      .label #{t :username}:
+      = f.text_field :username
+      .label #{t :password}:
+      = f.password_field :password
+      .label #{t :password_confirmation}:
+      = f.password_field :password_confirmation
+
+    .buttonbar
+      = f.submit t(:sign_up_button)

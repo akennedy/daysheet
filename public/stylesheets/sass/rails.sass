@@ -1,0 +1,156 @@
+!green1                      = #DFF7CA
+!green2                      = #B1D3A4
+!green3                      = #83AF7F
+!green4                      = #558B57
+!green5                      = #276733
+// Form validation messages.
+//------------------------------------------------------------------------------
+#errorExplanation
+  padding: 20px 35px !important
+  border: 1px solid #8a1f11 !important
+  padding: 7px !important
+  padding-bottom: 12px !important
+  margin: 20px 0 !important
+  background: #FFFFD5 !important
+  color: #8a1f11 !important
+  h2
+    text-align: left !important
+    font-weight: bold !important
+    padding: 5px 5px 5px 15px !important
+    font-size: 12px !important
+    margin: -7px !important
+    margin-bottom: 5px !important
+    background-color: #FFFFD5 !important
+    c0or: #222 !important
+  p
+    color: #333 !important
+    margin-bottom: 0 !important
+    padding: 5px !important
+  ul
+    margin-left: 25px 
+    li
+      font-size: 12px !important
+      list-style: square !important
+      list-style-position: inside
+
+.field_with_errors
+  display: inline !important
+  label
+    color: #8a1f11 !important
+  input, select, textarea
+    border: 1px solid #8a1f11 !important
+    background-color: #FFFFD5 !important
+    color: red !important
+
+// Flash messages.
+//------------------------------------------------------------------------------
+p
+  &.flash_warning, &.flash_error, &.flash_alert
+    :text-align center
+    :background lightyellow
+    :color maroon
+    :margin 0px
+    :padding 5px 0px 5px 16px
+
+  &.flash_notice, &.flash_message
+    :text-align center
+    :background #df9
+    :color darkgreen
+    :margin 0px
+    :padding 5px 0px 5px 16px
+
+  &.flash_exception
+    :text-align center
+    :background #df9
+    :border 5px limegreen solid
+    :font-size 14px
+    :margin 50px auto
+    :padding 50px
+    :width 450px
+    :-moz-box-shadow 5px 5px 15px #999, -5px 0px 15px #999
+    :-webkit-box-shadow 5px 5px 15px #999, -5px 0px 15px #999
+
+// Autocomplete.
+//------------------------------------------------------------------------------
+div
+  &.auto_complete
+    :background white
+    :border
+      :left 1px solid silver
+      :right 1px solid silver
+      :bottom 1px solid silver
+    :margin 0px
+    :padding 0px
+    :position absolute
+    :width 310px
+    ul
+      :list-style-type none
+      :margin 0px
+      :padding 0px
+      li
+        :color #3f3f3f
+        :cursor pointer
+        :display block
+        :list-style-type none
+        :margin 0px
+        :padding 2px
+        .highlight
+          :background lightyellow
+        &.selected
+          :background royalblue
+          :color white
+          .highlight
+            :background royalblue
+
+// Pagination.
+//------------------------------------------------------------------------------
+
+.pagination
+  :float right
+  :background white
+  :margin 6px 0px 0px 0px
+  a, span, em
+    :padding .2em .5em
+    :display block
+    :float left
+    :margin-right 1px
+  span.disabled
+    :color #999
+    :border 1px solid #DDD
+  em
+    :font-weight bold
+    :background !green2
+    :color !green5
+    :border 1px solid !green5
+  a
+    :text-decoration none
+    :color !green5
+    :border 1px solid !green5
+    &:hover, &:focus
+      :color #fff
+      :border-color !green4
+  .page_info
+    :background !green1
+    :color white
+    :padding .4em .6em
+    :width 22em
+    :margin-bottom .3em
+    :text-align center
+    b
+      :color #003
+      :background = #2E6AB1 + 60
+      :padding .1em .25em
+    
+  /* self-clearing method:
+  &:after
+    :content "."
+    :display block
+    :height 0
+    :clear both
+    :visibility hidden
+  * html &
+    :height 1%
+  *:first-child+html &
+    :overflow hidden
+
+

@@ -1,0 +1,21 @@
+.standalone#standalone
+  = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+    = devise_error_messages!
+    / .title_tools #{t :no_account} #{link_to t(:sign_up_now), new_user_registration_path}
+    .title= t(:login)
+    .section
+      .label= t(:username_or_email) + ':'
+      = f.text_field :username
+      .label= t(:password) + ':'
+      = f.password_field :password
+      
+    - if devise_mapping.rememberable?
+      %div{:style => "margin-left:12px"}
+        = f.check_box :remember_me
+        = f.label :remember_me
+    %br
+    .buttonbar
+      = f.submit t(:login)
+      #{t :or} 
+      = link_to t(:forgot_password) << '?', new_user_password_path
+

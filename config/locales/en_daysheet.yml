@@ -1,0 +1,177 @@
+en:
+  language: English
+
+  # Generic terms.
+  #----------------------------------------------------------------------------
+  or: or
+  at: at
+
+  # Settings.
+  #----------------------------------------------------------------------------
+  tab_dashboard: Dashboard
+  tab_timesheets: Timesheets
+  tab_calendars: Calendar
+  
+  admin_tab_users: Users
+
+  # Model Validations.
+  #----------------------------------------------------------------------------
+  errors:
+    template: 
+      body: There were problems with the following fields
+      header: 
+          one: "1 error prohibited this %{model} from being saved"
+          other: "%{count} errors prohibited this %{model} from being saved"
+  activerecord:
+    errors:  
+      messages:
+        inclusion: "is not included in the list"
+        exclusion: "is reserved"
+        invalid: "is invalid"
+        confirmation: "doesn't match confirmation"
+        accepted: "must be accepted"
+        empty: "can't be empty"
+        blank: "can't be blank"
+        too_long: "is too long (maximum is {{count}} characters)"
+        too_short: "is too short (minimum is {{count}} characters)"
+        wrong_length: "is the wrong length (should be {{count}} characters)"
+        taken: "has already been taken"
+        not_a_number: "is not a number"
+        greater_than: "must be greater than {{count}}"
+        greater_than_or_equal_to: "must be greater than or equal to {{count}}"
+        equal_to: "must be equal to {{count}}"
+        less_than: "must be less than {{count}}"
+        less_than_or_equal_to: "must be less than or equal to {{count}}"
+        odd: "must be odd"
+        even: "must be even"
+
+  # Controllers.
+  #----------------------------------------------------------------------------
+  msg_require_admin: "You are not authorized to access this page."
+  msg_successfully_created: "Successfully created %{value}."
+  msg_failed_to_create: "Failed to create %{value}."
+  msg_successfully_updated: "Successfully updated %{value}."
+  msg_failed_to_update: "Failed to update %{value}."
+  
+  # Options.
+  #----------------------------------------------------------------------------
+  option_created_at: date created
+  option_updated_at: date updated
+  option_start_date: Start Date
+  option_stop_date: Stop Date
+  submit_options: Save %{models} Options
+  show_per_page: How many %{models} per page?
+  display_options: Display Options
+  other_options: Other Options
+  
+
+  # Views -> Common.
+  #----------------------------------------------------------------------------  
+  cancel: Cancel
+  edit: Edit
+  delete: Delete
+  could_not_find: "Couldn't find %{value}. Feel free to"
+  could_not_find_matching: "Couldn't find %{value} matching"
+  create_new: create new
+  sort_by: Sort %{models} by
+  recipient: %{models} recipient email
+ 
+  # Views -> Profile.
+  #----------------------------------------------------------------------------
+  already_signed_up: Already signed up?
+  edit_profile: Edit Profile
+  email: Email
+  login_now_link: Login Now!
+  my_profile: My Profile
+  change_password: Change Password
+  password: Password
+  password_confirmation: Confirm new password
+  new_password: New password
+  current_password: Current password
+  update_password: Update Password
+  phone: Phone
+  phone_small: phone
+  mobile: Mobile
+  mobile_small: mobile
+  profile: Profile
+  sign_up: Sign Up
+  sign_up_button: Sign Up
+  username: Username
+  username_or_email: Username or Email
+  works_at: "%{job_title} at %{company}"
+  first_name: First name
+  mi: Mi
+  last_name: Last name
+  title: Title
+  company: Company
+  contact_info: Contact Information
+  alt_email: Alternate email
+  save_profile: Save Profile
+
+  # Views -> Devise.
+  #----------------------------------------------------------------------------
+  forgot_password: Forgot Password
+  login: Login
+  no_account: Do not have an account?
+  remember_me: Remember Me
+  sign_up_now: Sign Up Now!
+  send_invite: Send Invite
+ 
+  # Views -> Home.
+  #----------------------------------------------------------------------------
+  home_filter: Home filter
+  
+  # Views -> Timesheets.
+  #----------------------------------------------------------------------------
+  timesheets: Timesheets
+  timesheets_small: timesheets
+  timesheet: Timesheet
+  timesheet_small: timesheet
+  timesheet_options: Timesheet Options
+  timesheet_options_small: timesheet options
+  new_timesheet: New Timesheet
+
+  # Views -> Shared.
+  #----------------------------------------------------------------------------
+  no_recent_items: There are no recent items to display yet.
+  recent_items: Recent Items
+  return_to: "Return to"
+  search_assets: Search %{value}
+ 
+  # Views -> Layout.
+  #----------------------------------------------------------------------------
+  about: About
+  about_ds: About DaySheet
+  admin: Admin
+  logout: Logout
+  quick_find: Quick find
+  welcome: Welcome
+  
+  # Views -> Admin
+  # TODO
+  #----------------------------------------------------------------------------
+  back_to_daysheet: Back to DaySheet
+  daysheet_admin_page: DaySheet Administration
+
+  # Views -> Admin -> Users
+  #----------------------------------------------------------------------------
+  create_user: Create User
+  invite_user: Invite User
+  users: Users
+  users_small: users
+  user_admin: Admin
+  user_active: Active
+  suspend: Suspend
+  user_since: user since %{value}
+  user_suspended: Suspended
+  user_suspended_on: suspended on %{value}
+  reactivate: Reactivate
+  last_seen: last seen %{value} ago
+  user_never_logged_in: "hasn't logged in yet"
+  
+  # Pluralizations.
+  #----------------------------------------------------------------------------
+  pluralize:
+    login:
+      one: '1 login'
+      other: '%{count} logins'

@@ -1,0 +1,42 @@
+/* line 10, sass/jquery.sass */
+.ui-icon {
+  color: #276733;
+}
+
+/* line 13, sass/jquery.sass */
+.ui-icon-white {
+  background-image: url(/stylesheets/daysheet-theme/images/ui-icons_ffffff_256x240.png);
+}
+
+/* line 18, sass/jquery.sass */
+input.error {
+  background-color: #ffffd5;
+  border: 1px solid #8a1f11;
+  color: red;
+}
+
+/* line 22, sass/jquery.sass */
+textarea.error {
+  background-color: #ffffd5;
+  border: 1px solid #8a1f11;
+  color: red;
+}
+
+/* line 26, sass/jquery.sass */
+select.error {
+  background-color: #ffffd5;
+  border: 1px solid #8a1f11;
+  color: #8a1f11;
+}
+
+/* line 30, sass/jquery.sass */
+label.error {
+  font-size: 12px;
+  display: block;
+  padding-bottom: 2px;
+  margin-left: 5px;
+  margin-top: 0;
+  padding-top: 0;
+  font-weight: bold;
+  color: #8a1f11;
+}

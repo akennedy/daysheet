@@ -1,0 +1,19 @@
+= form_for resource, :as => resource_name, :url => invitation_path(resource_name) do |f|
+  .title#title= t(:send_invite)
+  = f.error_messages
+  %fieldset
+    .section
+      .grid_5
+        %p
+          %em
+            Enter the person's email whom you would like to invite to use DaySheet.
+            After you submit an email will be sent to the invitee.
+        %p
+          = f.label :email
+          %br
+          = f.text_field :email
+      .clear
+    .buttonbar
+      = f.submit "Send an invitation"
+      #{t :or}
+      = link_to_cancel admin_path

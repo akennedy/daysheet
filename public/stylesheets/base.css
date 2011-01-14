@@ -1,0 +1,123 @@
+/* line 16, sass/base.sass */
+html, body {
+  background: #e5e5e5;
+  font-size-adjust: none;
+  font-stretch: normal;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  height: 100%;
+  line-height: normal;
+}
+
+/* line 27, sass/base.sass */
+body, ol, ul, li, dt, tt, label, input, select, textarea {
+  font-size: 12px;
+  font-family: "Lucida Grande", Geneva, Arial, Helvetica, sans-serif;
+}
+
+/* line 32, sass/base.sass */
+body, h1, h2, h3, h4, h5, h6, ol, ul, li {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* line 36, sass/base.sass */
+form {
+  margin: 0px;
+}
+
+/* line 39, sass/base.sass */
+ul li {
+  list-style-type: none;
+}
+
+/* line 42, sass/base.sass */
+label {
+  font-weight: bold;
+  color: gray;
+}
+
+/* line 46, sass/base.sass */
+fieldset {
+  padding: 1em;
+  margin: 1em 0 0 0;
+  border-top: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+  background: none repeat scroll 0 0 whitesmoke;
+}
+
+/* line 54, sass/base.sass */
+legend {
+  font-weight: bold;
+  font-size: 1em;
+  background: white;
+  border: 1px solid maroon;
+  padding: 3px;
+}
+
+/* line 61, sass/base.sass */
+input[type=text], input[type=password], input.text, input.title, textarea, select {
+  background-color: white;
+  border: 1px solid #bbbbbb;
+  padding: 2px;
+}
+
+/* line 66, sass/base.sass */
+input[type=text] {
+  width: 200px;
+}
+
+/* line 71, sass/base.sass */
+a {
+  text-decoration: none;
+}
+/* line 73, sass/base.sass */
+a:link, a:visited {
+  color: #276733;
+}
+/* line 75, sass/base.sass */
+a:hover {
+  background: #276733;
+  color: white;
+}
+/* line 79, sass/base.sass */
+a img {
+  background-color: white;
+  border: none;
+  color: white;
+  text-decoration: none;
+}
+
+/* line 86, sass/base.sass */
+#options a {
+  border-bottom: 1px dotted darkcyan;
+  color: darkcyan;
+  text-decoration: none;
+}
+/* line 90, sass/base.sass */
+#options a:hover {
+  background: #e5e5e5;
+  border-bottom: 1px dotted darkblue;
+  color: darkblue;
+}
+
+/* line 97, sass/base.sass */
+abbr {
+  font-size: 9px;
+}
+
+/* line 100, sass/base.sass */
+small {
+  font-size: 10px;
+}
+
+/* line 103, sass/base.sass */
+dt {
+  font-size: 11px;
+}
+
+/* line 106, sass/base.sass */
+tt {
+  font-size: 12px;
+}

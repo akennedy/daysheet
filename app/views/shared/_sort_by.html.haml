@@ -1,0 +1,5 @@
+- model = controller.controller_name.classify.constantize
+%select{:id => 'sort_by', :name => 'sort_by'}
+  - model.sort_by_fields.each do |field|
+    - selected = field == model.sort_by_map.invert[@sort_by] ? true : false
+    %option{:value => field, :selected => selected}= t("option_#{field}")
