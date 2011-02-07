@@ -29,12 +29,12 @@ class User < ActiveRecord::Base
   def role?(role)
     return !!self.roles.find_by_name(role.to_s.camelize)
   end
-  
+
   #----------------------------------------------------------------------------
   def full_name
     first_name.blank? || last_name.blank? ? email : "#{first_name} " + (mi ? "#{mi} " : '') + "#{last_name}"
   end
-  
+
   #----------------------------------------------------------------------------
   def suspended?
     self.suspended_at != nil
@@ -48,7 +48,7 @@ class User < ActiveRecord::Base
     end
     super
   end
-  
+
   #----------------------------------------------------------------------------
   def preference
     Preference.new(:user => self)
@@ -56,5 +56,5 @@ class User < ActiveRecord::Base
   alias :pref :preference
 
   #----------------------------------------------------------------------------
-  
+
 end

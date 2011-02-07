@@ -4,13 +4,13 @@ jQuery(document).bind "ready", () =>
 ## Common
 ##----------------------------------------------------------------------------
   $('.datepicker').datepicker({changeYear: true, yearRange: "-110:+0"})
-  
+
 ##----------------------------------------------------------------------------
   $('.title_tools').children('a').mouseenter () ->
     $(this).children('span.ui-icon').addClass('ui-icon-white')
   $('.title_tools').children('a').mouseleave () ->
     $(this).children('span.ui-icon').removeClass('ui-icon-white')
-    
+
 ##----------------------------------------------------------------------------
   $('#search').bind('keyup', () ->
     controller = $(this).data('path')

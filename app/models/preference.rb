@@ -1,6 +1,6 @@
 class Preference < ActiveRecord::Base
   belongs_to :user
-  
+
   #-------------------------------------------------------------------
   Preference::PERPAGE = ['10', '20', '30', '40', '50']
 
