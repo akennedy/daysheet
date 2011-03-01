@@ -1,0 +1,26 @@
+= form_for @timesheet do |f|
+  .title_tools
+    = return_to_link(t(:timesheets), timesheets_path)
+  .title
+    - timesheet_title = params[:action] + '_timesheet'
+    %span#timesheet_title #{t timesheet_title.to_sym}
+  = f.error_messages
+  = f.hidden_field :user_id, :value => current_user.id
+  %fieldset
+    .section
+      .grid_3
+        %p
+          = f.label :start_date, 'Starting workday'
+          %br
+          = f.text_field :start_date, :class => 'datepicker'
+      .grid_3
+        %p
+          = f.label :stop_date
+          %br
+          = f.text_field :stop_date, :class => 'datepicker'
+      .clear
+  #dates_worked
+  .buttonbar
+    = f.submit
+    #{t :or}
+    = link_to_cancel timesheets_path

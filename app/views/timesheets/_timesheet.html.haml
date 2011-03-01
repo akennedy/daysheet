@@ -6,7 +6,7 @@
 
   .indent
     / = link_to(h(timesheet.date_range), timesheet)
-    = link_to timesheet.date_range, "#"
+    = link_to timesheet.date_range, edit_timesheet_path(timesheet)
     %tt
       something
     %dt
