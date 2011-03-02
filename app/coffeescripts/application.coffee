@@ -101,9 +101,11 @@ jQuery(document).bind "ready", () =>
     if date < stop_date
       i = 0
       while date <= stop_date
-        $('#dates_worked_list').append("<tr style='width:100%;height:30px;'><td style='width:21%;'><label>#{displayDate(date)}</label></td>
-                                            <td style='width:10%;'><select class='day_option' data-benefit_hours_id='#{i}'><option value='worked'>Worked</option><option value='pto'>PTO</option><option value='fmla'>FMLA</option><option value='funeral'>Funeral</option><option value='jury_duty'>Jury Duty</option><option value='other'>Other</option></select></td>
-                                            <td style='width:20%;'><input type='text' id='benefit_hours_#{i}' style='display:none;width:80px;margin-left:10px;'></input></td>
+        $('#dates_worked_list').append("<tr style='width:100%;height:30px;'>
+                                            <input type='hidden' value='#{date.getMonth() + 1}/#{date.getDate()}/#{date.getFullYear()}' name='timesheet[timesheet_items_attributes][][date]'></input>
+                                            <td style='width:21%;'><label>#{displayDate(date)}</label></td>
+                                            <td style='width:10%;'><select class='day_option' data-benefit_hours_id='#{i}' name='timesheet[timesheet_items_attributes][][work_type]'><option value='worked'>Worked</option><option value='pto'>PTO</option><option value='fmla'>FMLA</option><option value='funeral'>Funeral</option><option value='jury_duty'>Jury Duty</option><option value='other'>Other</option><option value='off'>Off/Weekend</option></select></td>
+                                            <td style='width:21%;'><input type='text' id='benefit_hours_#{i}' style='display:none;width:80px;margin-left:10px;' name='timesheet[timesheet_items_attributes][][benefit_hours]'></input></td>
                                             <td style='width:49%;'>&nbsp;</td></tr>")
         date.setDate(date.getDate() + 1)
         i++
@@ -118,7 +120,7 @@ jQuery(document).bind "ready", () =>
 
   $('.day_option').live('change', () ->
     id = $(this).data('benefit_hours_id')
-    if $(this).val() != 'worked'
+    if $(this).val() != 'worked' && $(this).val() != 'off'
       $('#benefit_hours_' + id).show()
     else
       $('#benefit_hours_' + id).hide()

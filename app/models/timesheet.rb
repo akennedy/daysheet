@@ -1,5 +1,8 @@
 class Timesheet < ActiveRecord::Base
   belongs_to  :user
+  has_many :timesheet_items
+
+  accepts_nested_attributes_for :timesheet_items
 
   #----------------------------------------------------------------------------
   validates :start_date, :presence => true
