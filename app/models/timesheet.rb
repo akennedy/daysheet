@@ -1,8 +1,12 @@
 class Timesheet < ActiveRecord::Base
   belongs_to  :user
-  has_many :timesheet_items
+  has_many :timesheet_items, :dependent => :destroy
+  has_many :timesheet_recipients, :dependent => :destroy
+  has_many :timesheet_copies, :dependent => :destroy
 
-  accepts_nested_attributes_for :timesheet_items
+  accepts_nested_attributes_for :timesheet_items, :allow_destroy => true
+  accepts_nested_attributes_for :timesheet_recipients, :allow_destroy => true
+  accepts_nested_attributes_for :timesheet_copies, :allow_destroy => true
 
   #----------------------------------------------------------------------------
   validates :start_date, :presence => true

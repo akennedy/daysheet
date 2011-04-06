@@ -152,6 +152,7 @@ GEM
       roodi (>= 2.1.0)
     mime-types (1.16)
     mysql (2.8.1)
+    nested_form (0.1.0)
     newrelic_rpm (2.13.4)
     nokogiri (1.4.4)
     open4 (1.0.1)
@@ -270,6 +271,7 @@ DEPENDENCIES
   inploy (>= 1.6.8)
   metric_fu (>= 1.5.1)
   mysql
+  nested_form
   newrelic_rpm (>= 2.12.3)
   paperclip (>= 2.3.6)
   pickle (>= 0.4.2)

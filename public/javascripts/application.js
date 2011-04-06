@@ -106,17 +106,20 @@
       return "" + days[date.getDay()] + " " + months[date.getMonth()] + " " + (date.getDate()) + ", " + (date.getFullYear());
     };
     buildWorklogTable = function() {
-      var date, i, stop_date, _results;
-      $('#dates_worked').html('');
-      $('#dates_worked').append("<fieldset><table id='dates_worked_list'></table></fieldset>");
+      var date, i, random_number, stop_date, _results;
+      $('.old_time_sheet_item').hide();
+      $('.new_timesheet_item').remove();
+      $('.destroy_timesheet_items').val('1');
       date = new Date($('#timesheet_start_date').val());
       stop_date = new Date($('#timesheet_stop_date').val());
       if (date < stop_date) {
         i = 0;
+        random_number = Math.floor(Math.random() * 10101010101);
         _results = [];
         while (date <= stop_date) {
-          $('#dates_worked_list').append("<tr style='width:500px;height:30px;'>                                            <input type='hidden' value='" + (date.getMonth() + 1) + "/" + (date.getDate()) + "/" + (date.getFullYear()) + "' name='timesheet[timesheet_items_attributes][][date]'></input>                                            <td style='width:175px;'><label>" + (displayDate(date)) + "</label></td>                                            <td style='width:100px;'><select class='day_option' data-benefit_hours_id='" + i + "' name='timesheet[timesheet_items_attributes][][work_type]'><option value='worked'>Worked</option><option value='pto'>PTO</option><option value='fmla'>FMLA</option><option value='funeral'>Funeral</option><option value='jury_duty'>Jury Duty</option><option value='other'>Other</option><option value='off'>Off/Weekend</option></select></td>                                            <td style='width:200px;'><input type='text' class='benefit_hours_" + i + "' style='display:none;width:80px;margin-left:10px;' name='timesheet[timesheet_items_attributes][][benefit_hours]'></input></td>                                            </tr>");
+          $('#dates_worked_list').append("<tr class='new_timesheet_item dates_worked'>                                            <input type='hidden' value='" + (date.getMonth() + 1) + "/" + (date.getDate()) + "/" + (date.getFullYear()) + "' name='timesheet[timesheet_items_attributes][_" + random_number + "][date]'></input>                                            <td class='date'><label>" + (displayDate(date)) + "</label></td>                                            <td class='work_type'><select class='day_option' data-benefit_hours_id='" + i + "' name='timesheet[timesheet_items_attributes][_" + random_number + "][work_type]'><option value='worked'>Worked</option><option value='pto'>PTO</option><option value='fmla'>FMLA</option><option value='funeral'>Funeral</option><option value='jury_duty'>Jury Duty</option><option value='other'>Other</option><option value='off'>Off/Weekend</option></select></td>                                            <td class='benefit_hours'><input type='text' class='benefit_hours_" + i + "' style='display:none;' name='timesheet[timesheet_items_attributes][_" + random_number + "][benefit_hours]'></input></td>                                            </tr>");
           date.setDate(date.getDate() + 1);
+          random_number++;
           _results.push(i++);
         }
         return _results;
@@ -125,7 +128,6 @@
       }
     };
     $('#timesheet_start_date').live('change', function() {
-      $('#dates_worked').html('');
       if ($(this).val() && $('#timesheet_stop_date').val()) {
         return buildWorklogTable();
       }
@@ -140,10 +142,13 @@
         return $('.benefit_hours_' + id).val('');
       }
     });
-    return $('#timesheet_stop_date').live('change', function() {
+    $('#timesheet_stop_date').live('change', function() {
       if ($(this).val() && $('#timesheet_start_date').val()) {
         return buildWorklogTable();
       }
+    });
+    return $('.timesheet').mouseenter(function() {
+      return console.log($(this).data('id'));
     });
   }, this));
   window.daysheet = {

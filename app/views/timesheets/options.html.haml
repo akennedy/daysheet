@@ -23,10 +23,14 @@
       .clear
     .subtitle #{t :other_options}
     .section
-      .grid_3
+      .grid_4
         %p
-          = label_tag :recipient, t(:recipient, :models => t(:timesheets))
-          = text_field_tag :recipient, @recipient
+          = label_tag :recipients, t(:recipients, :models => t(:timesheets))
+          = text_field_tag :recipients, @recipients
+      .clear
+      .grid_4
+        = label_tag :copies, t(:copies, :models => t(:timesheets))
+        = text_field_tag :copies, @copies
       .clear
   .buttonbar
     = submit_tag t(:submit_options, :models => t(:timesheet))

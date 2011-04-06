@@ -74,14 +74,16 @@ class TimesheetsController < ApplicationController
   def options
     @per_page = current_user.pref[:timesheets_per_page] || Timesheet.per_page
     @sort_by  = current_user.pref[:timesheets_sort_by]  || Timesheet.sort_by
-    @recipient = current_user.pref[:timesheets_recipient] || Timesheet.recipient
+    @send_recipients = current_user.pref[:timesheets_send_recipients] || Timesheet.recipient
+    @cc_recipients = current_user.pref[:timesheets_cc_recipients] || Timesheet.recipient
   end
 
   #----------------------------------------------------------------------------
   def redraw
     current_user.pref[:timesheets_per_page] = params[:per_page] if params[:per_page]
     current_user.pref[:timesheets_sort_by]  = Timesheet::sort_by_map[params[:sort_by]] if params[:sort_by]
-    current_user.pref[:timesheets_recipient]  = params[:recipient] if params[:recipient]
+    current_user.pref[:timesheets_send_recipients]  = params[:send_recipients] if params[:send_recipients]
+    current_user.pref[:timesheets_cc_recipients]  = params[:cc_recipients] if params[:cc_recipients]
     redirect_to timesheets_path
     flash[:notice] = t(:msg_successfully_updated, :value => t(:timesheet_options_small))
   end

@@ -79,8 +79,8 @@ en:
   could_not_find_matching: "Couldn't find %{value} matching"
   create_new: create new
   sort_by: Sort %{models} by
-  reply_recipients: "Who your %{models} will be sent to."
-  cc_recipients: "Who your %{models} will be copied to."
+  recipients: "Who your %{models} will be sent to."
+  copies: "Who your %{models} will be copied to."
 
   # Views -> Profile.
   #----------------------------------------------------------------------------

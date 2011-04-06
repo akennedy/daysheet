@@ -1,4 +1,4 @@
-= form_for @timesheet do |f|
+= nested_form_for @timesheet do |f|
   .title_tools
     = return_to_link(t(:timesheets), timesheets_path)
   .title
@@ -6,6 +6,30 @@
     %span#timesheet_title #{t timesheet_title.to_sym}
   = f.error_messages
   = f.hidden_field :user_id, :value => current_user.id
+  %fieldset
+    .grid_4
+      %h3{:style => 'margin-bottom:5px;'} Recipients
+      = f.fields_for :timesheet_recipients do |tr|
+        .grid_3{:style => 'margin-bottom:5px;'}
+          = tr.label :email
+          = tr.text_field :email
+          = tr.link_to_remove "Remove"
+        .clear
+
+      = f.link_to_add "Add a recipient", :timesheet_recipients
+
+    .grid_4
+      %h3{:style => 'margin-bottom:5px;'} Copies
+      = f.fields_for :timesheet_copies do |tr|
+        .grid_3{:style => 'margin-bottom:5px;'}
+          = tr.label :email
+          = tr.text_field :email
+          = tr.link_to_remove "Remove"
+        .clear
+
+      = f.link_to_add "Add a copy", :timesheet_copies
+    .clear
+
   %fieldset
     .section
       .grid_3
@@ -22,16 +46,18 @@
   #dates_worked
     %fieldset
       %table#dates_worked_list
+      %table
         - i = 0
         = f.fields_for :timesheet_items do |ti|
-          %tr{:style => 'width:500px;'}
-            %td{:style => 'width:175px;'}
+          %tr{:class => 'old_time_sheet_item dates_worked'}
+            = ti.hidden_field :_destroy, :value => false, :class => 'destroy_timesheet_items'
+            %td.date
               = ti.hidden_field :date
-              %label #{ti.object.date.strftime('%A %B %d, %Y')}
-            %td{:style => 'width:100px;'}
+              %label #{ti.object.date.strftime('%A %B %e, %Y')}
+            %td.work_type
               = ti.select :work_type, options_for_select(TimesheetItem::WORK_TYPES.map{|type| [type[:name], type[:value]]}, ti.object.work_type), {}, {:class => 'day_option', :'data-benefit_hours_id' => i}
-            %td{:style => 'width:200px;'}
-              = ti.text_field :benefit_hours, :style => "width:80px;margin-left:10px;#{benefit_hours_visible?(ti.object)}", :class => "benefit_hours_#{i}"
+            %td.benefit_hours
+              = ti.text_field :benefit_hours, :style => "#{benefit_hours_visible?(ti.object)}", :class => "benefit_hours_#{i}"
             - i += 1
   .buttonbar
     = f.submit

@@ -1,5 +1,5 @@
 module ApplicationHelper
-  
+
 #----------------------------------------------------------------------------
   def tabs(tabs = Daysheet::Tabs.main)
     if tabs
@@ -9,13 +9,13 @@ module ApplicationHelper
       raise Daysheet::MissingSettings, "Tab settings are missing, please run <b>rake daysheet:setup</b> command."
     end
   end
-  
+
   def tabless_layout?
     %w(sessions passwords).include?(controller.controller_name) ||
     ((controller.controller_name == "invitations") && (%w(edit).include?(controller.action_name))) || ((controller.controller_name == "registrations") && (%w(new).include?(controller.action_name)))
   end
 
-#----------------------------------------------------------------------------    
+#----------------------------------------------------------------------------
   def show_flash(options = { :sticky => false })
     [:error, :warning, :info, :notice, :alert].each do |type|
       if flash[type]
@@ -25,7 +25,7 @@ module ApplicationHelper
     end
     content_tag(:p, nil, :id => "flash", :style => "display:none;")
   end
-  
+
 #----------------------------------------------------------------------------
   def avatar_for(model, args = {})
     args[:size]  ||= "75x75"
@@ -95,12 +95,12 @@ module ApplicationHelper
   def link_to_edit(object, url, options = {})
     link_to options[:text], url if can? :update, object
   end
-  
+
 #----------------------------------------------------------------------------
   def link_to_invite(object, url, options = {})
     link_to raw("<span class='ui-icon ui-icon-arrowreturnthick-1-e' style='display:inline-block;'></span>#{options[:text]}"), url if can? :create, object
   end
-  
+
 #----------------------------------------------------------------------------
   def link_to_options(object, url, options = {})
     link_to raw("<span class='ui-icon ui-icon-arrowreturnthick-1-e' style='display:inline-block;'></span>#{options[:text]}"), url# if can? :read, object
@@ -116,6 +116,6 @@ module ApplicationHelper
     end
     link_to(h(name), "mailto:#{mailto}", :title => email)
   end
-  
+
 #----------------------------------------------------------------------------
 end

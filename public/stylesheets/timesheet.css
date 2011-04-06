@@ -1,0 +1,22 @@
+/* line 1, sass/timesheet.sass */
+.dates_worked {
+  width: 500px;
+  height: 30px;
+}
+/* line 5, sass/timesheet.sass */
+.dates_worked td.date {
+  width: 175px;
+}
+/* line 7, sass/timesheet.sass */
+.dates_worked td.work_type {
+  width: 100px;
+}
+/* line 9, sass/timesheet.sass */
+.dates_worked td.benefit_hours {
+  width: 200px;
+}
+/* line 11, sass/timesheet.sass */
+.dates_worked td.benefit_hours input {
+  width: 80px;
+  margin-left: 10px;
+}

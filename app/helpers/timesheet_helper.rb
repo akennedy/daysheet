@@ -1,4 +1,4 @@
-module TimesheetItemsHelper
+module TimesheetHelper
 
 #----------------------------------------------------------------------------
   def benefit_hours_visible?(timesheet_item)

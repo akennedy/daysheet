@@ -13,7 +13,7 @@ class TimesheetItem < ActiveRecord::Base
 
   def validate_timesheet_item
     unless ['worked', 'off'].include?(self.work_type)
-      self.errors.add(:benefit_hours, "must be inserted on days that were taken off.")
+      self.errors.add(:benefit_hours, "must be inserted on days that were taken off.") if self.benefit_hours.blank?
     end
   end
 end

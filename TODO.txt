@@ -1,4 +1,4 @@
-- Save an array of recipients and CC's
+done - Save an array of recipients and CC's
 - Refactor the timesheet/timesheet items form to use en_daysheet.yml
 - Attempt refactoring the timesheet javascript
 - When hovering over the timesheet on the show page, an email link will appear

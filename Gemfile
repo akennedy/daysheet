@@ -3,6 +3,7 @@ source 'http://rubygems.org'
 gem 'rails', '3.0.3'
 
 gem "mysql"
+gem "nested_form"
 gem "haml-rails", ">= 0.2"
 gem "inherited_resources", ">=1.1.2"
 gem "will_paginate", ">=3.0.pre2"
