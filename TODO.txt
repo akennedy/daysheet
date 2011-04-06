@@ -1,0 +1,8 @@
+- Save an array of recipients and CC's
+- Refactor the timesheet/timesheet items form to use en_daysheet.yml
+- Attempt refactoring the timesheet javascript
+- When hovering over the timesheet on the show page, an email link will appear
+  - When clicking the email, it will come up with a dialog saying "Timesheet whatever will be sent to #{reply_list} and #{cc_list}.  Ok/Cancel"
+- Email will send a formatted email of the days worked
+- Ability to override recipients and copies
+- 'Who your Timesheets will be copied to.', 'Who your Timesheets will be sent to.' - lowercase T in en_daysheet.yml

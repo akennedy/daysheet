@@ -91,7 +91,7 @@ jQuery(document).bind "ready", () =>
   displayDate= (date) ->
     days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
     months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
-    return "#{days[date.getDay()]} #{months[date.getMonth()]} #{date.getDate()} #{date.getFullYear()}"
+    return "#{days[date.getDay()]} #{months[date.getMonth()]} #{date.getDate()}, #{date.getFullYear()}"
 
   buildWorklogTable= () ->
     $('#dates_worked').html('')
@@ -101,12 +101,12 @@ jQuery(document).bind "ready", () =>
     if date < stop_date
       i = 0
       while date <= stop_date
-        $('#dates_worked_list').append("<tr style='width:100%;height:30px;'>
+        $('#dates_worked_list').append("<tr style='width:500px;height:30px;'>
                                             <input type='hidden' value='#{date.getMonth() + 1}/#{date.getDate()}/#{date.getFullYear()}' name='timesheet[timesheet_items_attributes][][date]'></input>
-                                            <td style='width:21%;'><label>#{displayDate(date)}</label></td>
-                                            <td style='width:10%;'><select class='day_option' data-benefit_hours_id='#{i}' name='timesheet[timesheet_items_attributes][][work_type]'><option value='worked'>Worked</option><option value='pto'>PTO</option><option value='fmla'>FMLA</option><option value='funeral'>Funeral</option><option value='jury_duty'>Jury Duty</option><option value='other'>Other</option><option value='off'>Off/Weekend</option></select></td>
-                                            <td style='width:21%;'><input type='text' id='benefit_hours_#{i}' style='display:none;width:80px;margin-left:10px;' name='timesheet[timesheet_items_attributes][][benefit_hours]'></input></td>
-                                            <td style='width:49%;'>&nbsp;</td></tr>")
+                                            <td style='width:175px;'><label>#{displayDate(date)}</label></td>
+                                            <td style='width:100px;'><select class='day_option' data-benefit_hours_id='#{i}' name='timesheet[timesheet_items_attributes][][work_type]'><option value='worked'>Worked</option><option value='pto'>PTO</option><option value='fmla'>FMLA</option><option value='funeral'>Funeral</option><option value='jury_duty'>Jury Duty</option><option value='other'>Other</option><option value='off'>Off/Weekend</option></select></td>
+                                            <td style='width:200px;'><input type='text' class='benefit_hours_#{i}' style='display:none;width:80px;margin-left:10px;' name='timesheet[timesheet_items_attributes][][benefit_hours]'></input></td>
+                                            </tr>")
         date.setDate(date.getDate() + 1)
         i++
     else
@@ -121,10 +121,10 @@ jQuery(document).bind "ready", () =>
   $('.day_option').live('change', () ->
     id = $(this).data('benefit_hours_id')
     if $(this).val() != 'worked' && $(this).val() != 'off'
-      $('#benefit_hours_' + id).show()
+      $('.benefit_hours_' + id).show()
     else
-      $('#benefit_hours_' + id).hide()
-      $('#benefit_hours_' + id).val('')
+      $('.benefit_hours_' + id).hide()
+      $('.benefit_hours_' + id).val('')
   )
 
   $('#timesheet_stop_date').live('change', () ->

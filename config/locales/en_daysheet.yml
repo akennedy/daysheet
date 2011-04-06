@@ -23,6 +23,11 @@ en:
           one: "1 error prohibited this %{model} from being saved"
           other: "%{count} errors prohibited this %{model} from being saved"
   activerecord:
+    attributes:
+      timesheet:
+        timesheet_items:
+          benefit_hours: 'Benefit hours'
+
     errors:
       messages:
         inclusion: "is not included in the list"
@@ -74,7 +79,8 @@ en:
   could_not_find_matching: "Couldn't find %{value} matching"
   create_new: create new
   sort_by: Sort %{models} by
-  recipient: %{models} recipient email
+  reply_recipients: "Who your %{models} will be sent to."
+  cc_recipients: "Who your %{models} will be copied to."
 
   # Views -> Profile.
   #----------------------------------------------------------------------------
